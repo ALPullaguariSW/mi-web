@@ -1,48 +1,71 @@
-# Astro Starter Kit: Basics
+# 🚀 Mi Portafolio Personal - Axel Pullaguari
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Bienvenido al repositorio de mi portafolio personal! Este proyecto es mi carta de presentación digital, construido para mostrar mis habilidades, proyectos y mi pasión por el desarrollo de software.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+**Visita el sitio en vivo:** [**https://ALPullaguariSW.github.io/mi-web/**](https://ALPullaguariSW.github.io/mi-web/) 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Captura de pantalla del Portafolio](https://user-images.githubusercontent.com/tu-id-de-github/tu-id-de-imagen.png) 
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## ✨ Características Principales
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Este no es solo un portafolio estático. He implementado varias características para crear una experiencia de usuario moderna y fluida:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+*   **Scroll Narrativo tipo "Apple":** Las secciones se apilan una sobre otra (`position: sticky`) para guiar al usuario a través de una historia visual.
+*   **Fondo Interactivo:** Un fondo de partículas animado con `tsparticles` que reacciona al movimiento del ratón, creando una sensación de profundidad.
+*   **Componentes Optimizados:** Uso del componente `<Image />` de Astro para la optimización automática de imágenes y lazy loading.
+*   **Diseño 100% Responsive:** Construido con Tailwind CSS, adaptándose perfectamente a cualquier dispositivo, desde móviles hasta escritorios.
+*   **Despliegue Automático (CI/CD):** Configurado con GitHub Actions para desplegar automáticamente cualquier cambio en la rama `main` a GitHub Pages.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 🛠️ Stack Tecnológico
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Este proyecto fue construido con un conjunto de herramientas modernas y enfocadas en el rendimiento:
 
-## 👀 Want to learn more?
+*   **Framework:** [**Astro**](https://astro.build/) - Para un rendimiento extremo y una carga casi instantánea (Zero JS por defecto).
+*   **Estilos:** [**Tailwind CSS**](https://tailwindcss.com/) - Para un desarrollo rápido y consistente de la UI a través de clases de utilidad.
+*   **Animaciones:**
+    *   [**Typed.js**](https://github.com/mattboldt/typed.js/) - Para el efecto de máquina de escribir en la sección principal.
+    *   [**tsParticles**](https://particles.js.org/) - Para el fondo de partículas animado.
+*   **Despliegue:** [**GitHub Pages**](https://pages.github.com/) & [**GitHub Actions**](https://github.com/features/actions)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## 🚀 Cómo Ejecutar este Proyecto Localmente
+
+Si deseas clonar y ejecutar este proyecto en tu propia máquina, sigue estos pasos:
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone https://github.com/ALPullaguariSW/mi-web.git
+    ```
+
+2.  **Navega a la carpeta del proyecto:**
+    ```bash
+    cd mi-web
+    ```
+
+3.  **Instala las dependencias:**
+    ```bash
+    npm install
+    ```
+
+4.  **Inicia el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+    ¡Listo! Ahora puedes abrir [http://localhost:4321](http://localhost:4321) en tu navegador para ver el sitio.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Siéntete libre de usar el código como inspiración para tu propio portafolio.
+
+---
+
+_Desarrollado con ❤️ por Axel Pullaguari._
