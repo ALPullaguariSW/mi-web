@@ -1,0 +1,107 @@
+---
+// src/sections/About.astro
+import { Image } from "astro:assets";
+import logoImage from "../assets/LogoLeon.svg";
+import BackendIcon from "../components/icons/Backend.astro";
+import FrontendIcon from "../components/icons/Frontend.astro";
+import DataIcon from "../components/icons/Data.astro";
+---
+
+<!-- 
+  CORRECCIÓN:
+  - Eliminamos 'h-screen' y 'sticky' para que sea una sección de flujo normal.
+  - Usamos 'min-h-screen' para que se vea bien en pantallas grandes.
+  - El fondo de gradiente se mantiene.
+-->
+<section
+  id="about"
+  class="min-h-screen md:h-screen relative flex flex-col justify-center items-center py-20 md:py-32 px-4 bg-gradient-to-br from-cyan-50 via-cyan-100 to-cyan-200 "
+>
+  <div
+    class="w-full max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+  >
+    <!-- COLUMNA IZQUIERDA -->
+    <div
+      class="text-center lg:text-left flex-col flex items-center justify-center"
+    >
+       <Image
+        src={logoImage}
+        alt="Logo de Axel Pullaguari"
+        width={200}
+        height={200}
+        class="mx-auto lg:mx-0 mb-8"
+      />
+      <div>
+        <h2
+          class="text-4xl md:text-2xl font-bold tracking-tighter text-gray-800 mb-4"
+        >
+          Desarrollador apasionado por crear soluciones completas.
+        </h2>
+        <p class="text-lg text-gray-600 max-w-lg mx-auto lg:mx-0">
+          Aunque mi especialidad es el backend, me encanta construir
+          experiencias de usuario fluidas y trabajar con datos para generar
+          impacto real.
+        </p>
+      </div>
+     
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="space-y-6">
+      <div
+        class="flex items-start gap-5 p-5 bg-white/50 border border-white/50 rounded-xl shadow-lg backdrop-blur-sm"
+      >
+        <div
+          class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center bg-cyan-500/20 text-cyan-700"
+        >
+          <BackendIcon class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900">
+            Backend & Arquitectura
+          </h3>
+          <p class="text-gray-700">
+            APIs RESTful, microservicios y bases de datos con .NET, Java y
+            Python.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Habilidad 2: Frontend -->
+      <div
+        class="flex items-start gap-5 p-5 bg-white/50 border border-white/50 rounded-xl shadow-lg backdrop-blur-sm"
+      >
+        <div
+          class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center bg-emerald-500/20 text-emerald-700"
+        >
+          <FrontendIcon class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900">Desarrollo Frontend</h3>
+          <p class="text-gray-700">
+            Interfaces interactivas y responsivas con React y Astro.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Habilidad 3: Datos & IA -->
+      <div
+        class="flex items-start gap-5 p-5 bg-white/50 border border-white/50 rounded-xl shadow-lg backdrop-blur-sm"
+      >
+        <div
+          class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center bg-purple-500/20 text-purple-700"
+        >
+          <DataIcon class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900">
+            Visión por Computadora & Datos
+          </h3>
+          <p class="text-gray-700">
+            Procesamiento de imágenes y análisis con Python, OpenCV y YOLOv8.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

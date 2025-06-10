@@ -1,0 +1,62 @@
+---
+
+import { Image } from 'astro:assets';
+import profileImage from '../assets/foto-perfil.jpg';
+
+---
+
+<section
+  id="hero"
+  class="h-screen relative md:sticky top-0 flex flex-col justify-center items-center text-center text-white"
+>
+  
+  
+  <div class="z-10 animate-fade-in">
+    <Image
+    src={profileImage}
+    alt="Foto de Axel Pullaguari"
+    width={300}
+    height={300}
+    class="rounded-full top-1 mx-auto mb-8 border-4 rotate-270 border-cyan-500 animate-fade-in"
+  />
+    <h1 class="text-5xl md:text-8xl font-bold tracking-tighter mb-4">
+      Hola, soy Axel.
+    </h1>
+    <p id="typed-text" class="text-xl md:text-3xl text-cyan-400 font-light"></p>
+  </div>
+  <div class="absolute bottom-10 z-10 animate-bounce">
+    <svg
+      class="w-6 h-6 text-gray-400"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </div>
+  
+ 
+</section>
+ <script>
+    import Typed from "typed.js";
+
+    const options = {
+      strings: [
+        "Desarrollador Backend",
+        "Ideas en Código",
+        "Entusiasta de la IA",
+        "Apasionado por el Código Limpio"
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+      showCursor: false
+
+    };
+
+    new Typed("#typed-text", options);
+  </script>
+

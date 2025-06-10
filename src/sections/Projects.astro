@@ -1,0 +1,51 @@
+---
+// src/sections/Projects.astro
+---
+<section
+  id="projects"
+  class="min-h-screen md:h-screen relative md:sticky md:top-0 flex flex-col justify-center items-center py-20 md:py-32 px-4 bg-cyan-900-opacity-90 bg-gradient-to-br from-cyan-900 to-gray-900 text-white"
+>
+
+  <div class="container mx-auto text-center mb-12">
+    <h2 class="text-5xl font-bold tracking-tighter text-white">
+      Proyectos Destacados
+    </h2>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+    
+    <!-- Tarjeta de Proyecto 1 -->
+    <div class="project-card group bg-gray-800 rounded-xl p-6 flex flex-col items-center transition-all duration-300 hover:-translate-y-2">
+      <div class="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110">🎓</div>
+      <h3 class="text-2xl font-bold mb-2 text-white">Detección de Caídas</h3>
+      <p class="text-gray-300 mb-6 text-center flex-grow">Análisis de video en tiempo real con YOLOv8 y OpenCV.</p>
+      <a href="..." target="_blank" class="project-button mt-auto px-6 py-2 rounded-full bg-cyan-600 text-white font-semibold transition-all duration-300 hover:bg-cyan-500 hover:scale-105">
+        Ver Código
+      </a>
+    </div>
+
+    <!-- Tarjeta de Proyecto 2 -->
+    <div class="project-card group bg-gray-800 rounded-xl p-6 flex flex-col items-center transition-all duration-300 hover:-translate-y-2">
+      <div class="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110">🏫</div>
+      <h3 class="text-2xl font-bold mb-2 text-white">Sistema de Cursos</h3>
+      <p class="text-gray-300 mb-6 text-center flex-grow">Plataforma de microservicios con .NET y React.</p>
+      <a href="..." target="_blank" class="project-button mt-auto px-6 py-2 rounded-full bg-cyan-600 text-white font-semibold transition-all duration-300 hover:bg-cyan-500 hover:scale-105">
+        Ver Código
+      </a>
+    </div>
+
+    <!-- Tarjeta de Proyecto 3 -->
+    <div class="project-card group bg-gray-800 rounded-xl p-6 flex flex-col items-center transition-all duration-300 hover:-translate-y-2">
+      <div class="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110">💬</div>
+      <h3 class="text-2xl font-bold mb-2 text-white">Chat en Tiempo Real</h3>
+      <p class="text-gray-300 mb-6 text-center flex-grow">Chat con WebSockets, Node.js y Express.</p>
+      <a href="..." target="_blank" class="project-button mt-auto px-6 py-2 rounded-full bg-cyan-600 text-white font-semibold transition-all duration-300 hover:bg-cyan-500 hover:scale-105">
+        Ver Código
+      </a>
+    </div>
+
+  </div>
+
+  
+
+</section>
