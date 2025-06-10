@@ -1,13 +1,16 @@
 ---
 // src/components/Header.astro
-import Logo from './LogoLeon.svg?raw';
+
+// CORRECCIÓN: Usamos un alias de Astro ('@/components/') para la ruta.
+// '@/' siempre apunta a la carpeta 'src/'.
+// Asegúrate de que tu archivo 'LogoLeon.svg' esté en 'src/components/'.
+import Logo from '@/components/LogoLeon.svg?raw';
 ---
 <header class="fixed top-0 left-0 w-full z-50 transition-colors duration-300" id="main-header">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a href="#hero" class="w-12 h-12 text-white">
       <div set:html={Logo} />
     </a>
-    <!-- Añadimos un ID al contenedor de los enlaces para seleccionarlos fácilmente -->
     <div class="hidden md:flex space-x-8 text-white font-semibold" id="nav-links">
       <a href="#about" class="hover:text-cyan-400 transition-colors">Sobre Mí</a>
       <a href="#projects" class="hover:text-cyan-400 transition-colors">Proyectos</a>
@@ -21,29 +24,21 @@ import Logo from './LogoLeon.svg?raw';
   .logo-lion { fill: #f4f6fa; }
 </style>
 
-<!-- ESTE SCRIPT SOLUCIONA EL PROBLEMA DEL SCROLL -->
+<!-- El script para el scroll ya está bien, no necesita cambios -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. Manejar los enlaces de navegación principales
     const navLinksContainer = document.querySelector('#nav-links');
-    if (!navLinksContainer) return; // Salimos si no encontramos el contenedor
+    if (!navLinksContainer) return;
 
     const navLinks = navLinksContainer.querySelectorAll('a');
-
     navLinks.forEach(link => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        
         const href = link.getAttribute('href');
-        if (!href) return; // Salimos si el enlace no tiene href
-
+        if (!href) return;
         const targetElement = document.querySelector(href);
-
-        // La comprobación clave sigue aquí
         if (targetElement) {
-          // Extraemos la propiedad 'offsetTop' para que TypeScript sepa que es un número.
           const offsetTop = (targetElement as HTMLElement).offsetTop;
-          
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
@@ -52,7 +47,6 @@ import Logo from './LogoLeon.svg?raw';
       });
     });
 
-    // 2. Manejar el clic en el logo
     const logoLink = document.querySelector('header a[href="#hero"]');
     if (logoLink) {
         logoLink.addEventListener('click', (e) => {
