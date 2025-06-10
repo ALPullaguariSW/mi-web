@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Se ejecuta cada vez que haces un 'push' a la rama 'main'
+  push:
+    branches:
+      - main
+  # Te permite ejecutarlo manualmente desde la pestaña Actions en GitHub
+  workflow_dispatch:
+
+# Permisos necesarios para que la acción pueda escribir en GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
+        # No necesitamos 'with:' si la configuración es estándar
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
