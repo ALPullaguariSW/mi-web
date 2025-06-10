@@ -4,7 +4,7 @@
 
 **Visita el sitio en vivo:** [**https://ALPullaguariSW.github.io/mi-web/**](https://ALPullaguariSW.github.io/mi-web/) 
 
-![Captura de pantalla del Portafolio](https://user-images.githubusercontent.com/tu-id-de-github/tu-id-de-imagen.png) 
+![Captura de pantalla del Portafolio](https://github.com/user-attachments/assets/05056c92-de56-4e76-a1ab-68280a6e9cc8) 
 
 
 ---
