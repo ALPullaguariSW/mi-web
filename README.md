@@ -4,9 +4,7 @@
 
 **Visita el sitio en vivo:** [**https://ALPullaguariSW.github.io/mi-web/**](https://ALPullaguariSW.github.io/mi-web/) 
 
-![Captura de pantalla del Portafolio](https://github.com/user-attachments/assets/05056c92-de56-4e76-a1ab-68280a6e9cc8) 
-
-
+![Captura de pantalla del Portafolio](https://github.com/user-attachments/assets/05056c92-de56-4e76-a1ab-68280a6e9cc8)
 ---
 
 ## ✨ Características Principales
